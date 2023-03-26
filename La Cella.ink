@@ -3,7 +3,7 @@ Avvolto da una calda oscurità, noti che il tepore inizia a svanire, quando odi 
 
  * [Alzati] -> cell_context
  * [Continua a dormire]
- "Non puoi ignorare i tuoi problemi per sempre. E' ora. SVEGLIATI!"
+ "Non puoi ignorare per sempre il tuo dolore. E' ora. SVEGLIATI!"
 Ti alzi di soprassalto, col cuore che batte all'impazzata. <>
 -> cell_context
 
@@ -75,8 +75,10 @@ VAR hasIronFile = 0
 { inventoryType:
 - 0: Osservi gli oggetti in tuo possesso...
 - 1: Apri la tua sacca e ne osservi il contenuto...
+- 2: Osservi il contenuto del tuo zaino...
 }
-+ {hasBabyDoll} [Bambola di pezza] -> cell_baby_doll
++ {hasBabyDoll == 1} [Bambola di pezza] -> cell_baby_doll
++ {hasBabyDoll == 2} [Resti della bambola] -> cell_baby_doll
 + {hasIronFile} [Lima di ferro] -> cell_iron_file
 + [--- Chiudi inventario ---] -> currentContext
 
